@@ -1,12 +1,18 @@
 <%= render @list %>
 
-<% @movies.each do |movie| %>
+<% @bookmarks.each do |bookmark| %>
   <div>
-    <p><strong><%= movie.title %></strong></p>
-    <p><%= movie.overview %></p>
-    <p><%= movie.rating %></p>
+    <p><strong><%= bookmark.movie.title %></strong> - <%= bookmark.comment %></p>
+    <p><%= bookmark.movie.overview %></p>
+    <p><%= bookmark.movie.rating %></p>
+    <%= link_to "Delete",
+        bookmark_path(bookmark),
+        data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
   </div>
+
 <% end %>
+
+
 
 <%= link_to "Add Movie", new_list_bookmark_path(@list) %>
 
