@@ -1,0 +1,13 @@
+<%= render @list %>
+
+<% @movies.each do |movie| %>
+  <div>
+    <p><strong><%= movie.title %></strong></p>
+    <p><%= movie.overview %></p>
+    <p><%= movie.rating %></p>
+  </div>
+<% end %>
+
+<%= link_to "Add Movie", new_list_bookmark_path(@list) %>
+
+<%= link_to "Home", lists_path %>
