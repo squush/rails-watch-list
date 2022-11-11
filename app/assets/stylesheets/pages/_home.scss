@@ -5,5 +5,24 @@ h1 {
 
 
 .list-card {
-  border: 5px solid black;
+  border: 3px solid lightgray;
+  margin: 20px;
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px darkblue;
+
+  p {
+    text-decoration: none;
+    color: lightblue;
+
+    :hover {
+      color: blue;
+    }
+  }
+}
+
+.lists {
+  width: 200px;
+  display: flex;
+  justify-content: center;
 }
