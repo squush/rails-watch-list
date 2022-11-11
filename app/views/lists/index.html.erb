@@ -1,13 +1,15 @@
-<h1>Lists</h1>
+<div class="navbar">
+  <h1>Lists</h1>
+  <span class="btn"><%= link_to "New list", new_list_path %></span>
+</div>
 
 <div id="lists">
   <% @lists.each do |list| %>
-    <%= render list %>
-    <p>
-      <%= link_to "Show this list", list %>
-    </p>
+    <div class="list-card">
+      <%= render list %>
+      <p>
+        <%= link_to "Show this list", list %>
+      </p>
+    </div>
   <% end %>
 </div>
-
-
-<%= link_to "New list", new_list_path %>
