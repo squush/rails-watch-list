@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: rgb(238, 193, 193);
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -11,8 +11,12 @@
   width: 40px;
 }
 
+h1 {
+  text-align: center;
+}
+
 .navbar {
-  h1 {
-    text-align: center;
-  }
+  background:rgb(238, 193, 193);
+  text-decoration: none;
+  color: darkgray;
 }

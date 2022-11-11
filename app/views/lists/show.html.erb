@@ -3,25 +3,28 @@
   <span class="btn"><%= link_to "Home", lists_path %></span>
 </div>
 
-<%= render @list %>
-
-<div class="container">
-  <% @bookmarks.each do |bookmark| %>
-    <div class="movie-card">
-      <h5><strong><%= bookmark.movie.title %></strong></h5>
-      <p class="center"><%= bookmark.comment %></p>
-      <div class="movie-info">
-        <div class="movie">
-          <%= image_tag "https://image.tmdb.org/t/p/w500/#{bookmark.movie.poster_url}", alt: "movie", width: 200 %>
-        </div>
-        <div>
-          <p><%= bookmark.movie.overview %></p>
-          <p><%= bookmark.movie.rating %></p>
-          <%= link_to "Delete",
-              bookmark_path(bookmark),
-              data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+<div class="background" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://wallpapercave.com/wp/wnCoprl.jpg)">
+  <br>
+  <%= render @list %>
+  <div class="container">
+    <% @bookmarks.each do |bookmark| %>
+      <div class="movie-card">
+        <h5><strong><%= bookmark.movie.title %></strong></h5>
+        <p class="center"><%= bookmark.comment %></p>
+        <div class="movie-info">
+          <div class="movie">
+            <%= image_tag "https://image.tmdb.org/t/p/w500/#{bookmark.movie.poster_url}", alt: "movie", width: 200 %>
+          </div>
+          <div>
+            <p><%= bookmark.movie.overview %></p>
+            <p><%= bookmark.movie.rating %></p>
+            <%= link_to "Delete",
+                bookmark_path(bookmark),
+                data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+          </div>
         </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
+
 </div>

@@ -7,6 +7,11 @@
   box-shadow: 5px 5px 5px lightgray;
 }
 
+h2, h5 {
+  color: white;
+  text-align: center;
+}
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -18,10 +23,13 @@
   display: flex;
 }
 
-.center h5 {
+.center, h5 {
   text-align: center;
 }
 
 .movie-info {
   align-items: center;
+  p {
+    color: white;
+  }
 }
